@@ -45,5 +45,5 @@ jobs:
         uses: Azure/aks-set-context@v1.1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-          
-      
+          resource-group: first-pipeline-CICD
+          cluster-name: k8s-bootcamp
