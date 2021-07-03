@@ -1,3 +1,5 @@
+# Essa é uma pipeline básica, mas ao decorrer dos projetos a pipeline também vai crescendo (é versionada pelo main.yaml)
+
 name: CI, CD
 
 on:
