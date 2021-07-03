@@ -15,6 +15,7 @@ jobs:
     # O serviço irá rodar onde em:
     runs-on: ubuntu-latest
     # Passos que serão executados
+    # A cada " - " é um passo diferente
     steps:
       - uses: actions/checkout@v2
       
@@ -46,3 +47,9 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           resource-group: ${{ secrets.AZURE_RESOURCE_GROUP }}
           cluster-name: ${{ secrets.AZURE_CLUSTER_NAME }}
+      - name: Deploy Mongo
+        uses: Azure/k8s-deploy@v1
+        with:
+          manifests: |
+            k8s/mongodb/deployment.yaml
+            k8s/mongodb/service.yaml
