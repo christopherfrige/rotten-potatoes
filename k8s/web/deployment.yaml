@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: christopherfrige/rotten-potatoes:v1
+          image: christopherfrige/rotten-potatoes
           ports:
             - containerPort: 5000   # Mesma que recebeu EXPOSE no Dockerfile que criou a imagem
           env:
