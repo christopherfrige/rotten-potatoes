@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: movies-service
+spec:
+  selector:
+    app: movies
+  ports:
+    - port: 80
+      targetPort: 5000    # Targetport na 5000 porque é onde o container está rodando
+      nodePort: 30000     # Nodeport porque roda em on premise
