@@ -28,4 +28,4 @@ jobs:
           push: true
           tags: |
             christopherfrige/rotten-potatoes:latest
-            christopherfrige/rotten-potatoes:${{ githib.run_number }}
+            christopherfrige/rotten-potatoes:${{ github.run_number }}
