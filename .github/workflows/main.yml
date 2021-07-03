@@ -36,3 +36,14 @@ jobs:
           tags: |
             christopherfrige/rotten-potatoes:latest
             christopherfrige/rotten-potatoes:${{ github.run_number }}
+            
+  CD: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Azure Kubernetes set context
+        uses: Azure/aks-set-context@v1.1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      
